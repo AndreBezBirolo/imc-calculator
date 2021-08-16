@@ -2,22 +2,61 @@
 <html lang="pt-br" xml:lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Calculadora IMC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
+    <!-- Primary Meta Tags -->
+    <title>Calculadora de IMC</title>
+    <meta name="title" content="Calculadora de IMC">
+    <meta name="description"
+          content="O IMC é a relação entre peso e altura e o cálculo é feito de acordo com a fórmula: IMC = peso/ (altura x altura), devendo o peso estar em kg e a altura em metro, e o resultado é dado em kg/m2.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://andrejbezbirolo.tech/imc-calculator">
+    <meta property="og:title" content="Calculadora de IMC">
+    <meta property="og:description"
+          content="O IMC é a relação entre peso e altura e o cálculo é feito de acordo com a fórmula: IMC = peso/ (altura x altura), devendo o peso estar em kg e a altura em metro, e o resultado é dado em kg/m2.">
+    <meta property="og:image" content="">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://andrejbezbirolo.tech/imc-calculator">
+    <meta property="twitter:title" content="Calculadora de IMC">
+    <meta property="twitter:description"
+          content="O IMC é a relação entre peso e altura e o cálculo é feito de acordo com a fórmula: IMC = peso/ (altura x altura), devendo o peso estar em kg e a altura em metro, e o resultado é dado em kg/m2.">
+    <meta property="twitter:image" content="">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<form>
-    <label>
-        <input class="name-imc-home" placeholder="Nome">
-    </label>
-    <label>
-        <input class="weight-imc-home" placeholder="Peso">
-    </label>
-    <label>
-        <input class="height-imc-home" placeholder="Altura">
-    </label>
-    <button>Calcular</button>
-</form>
-<div class="result"></div>
+<main class="flex center-y-column column container">
+    <h1 class="title">Bem vindo,<br>à calculadora de IMC.</h1>
+    <div class="calculator-container flex column center-x-row">
+        <form class="form-imc">
+            <label class="flex">
+                <input class="name-imc-home" placeholder="Nome">
+            </label>
+            <label class="flex">
+                <input class="weight-imc-home" placeholder="Peso">
+                <span class="measure flex center-full font-bold">Kg</span>
+            </label>
+            <label class="flex">
+                <input class="height-imc-home" placeholder="Altura">
+                <span class="measure flex center-full font-bold">M</span>
+            </label>
+            <button class="calculate-button transition">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 60 60" xml:space="preserve">
+                    <path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
+                        c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
+                        C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z"/>
+                    <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+                        S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+                </svg>
+            </button>
+        </form>
+        <div class="result"></div>
+    </div>
+</main>
+
 </body>
-<script type="module" src="js/index.js"></script>
+<script type="module" src="main.js"></script>
 </html>

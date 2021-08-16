@@ -1,0 +1,119 @@
+@import url('reset.css');
+@import url('framework.css');
+
+:root {
+  --background: linear-gradient(180deg, #394253 0%, #181C27 147.23%);
+  --font-color: rgba(255, 255, 255, 0.65);
+  --dark-blue: #1D222E;
+}
+
+body {
+  font-family: Monospaced, sans-serif;
+}
+
+main {
+  background: var(--background);
+  color: var(--font-color);
+  padding: 75px 25px;
+  min-height: 100vh;
+}
+
+main .title {
+  font-size: 4.8rem;
+  line-height: 1.3em;
+  margin-bottom: 1.6rem;
+}
+
+
+
+.form-imc label {
+  width: 100%;
+}
+
+.form-imc .weight-imc-home,
+.form-imc .height-imc-home {
+  width: 90%;
+}
+
+.form-imc .measure,
+.form-imc .measure {
+  width: calc(100% - 90%);
+  background: linear-gradient(47.94deg, #2C3341 19.6%, #313949 77.32%);
+  border: 2px solid rgba(49, 57, 73, 0.5);
+  box-sizing: border-box;
+  box-shadow: -10px -10px 20px rgba(72, 80, 99, 0.26), 10px 10px 20px #262C37;
+  font-size: 1.6rem;
+  line-height: 1.4em;
+  color: var(--font-color);
+}
+
+.form-imc input {
+  padding: 16px 26px;
+  font-weight: bold;
+  font-size: 3.6rem;
+  line-height: 1.2em;
+  color: var(--font-color);
+  background: #313949;
+  border: 1px solid #313949;
+  box-sizing: border-box;
+  box-shadow: inset -5px -5px 10px rgba(64, 75, 95, 0.25), inset 5px 5px 10px #2C3341;
+  border-radius: 12px 0 0 12px;
+}
+@media(max-width: 768px) {
+  main .title {
+    text-align: center;
+    font-size: 3.4rem;
+  }
+  .form-imc input {
+    font-size: 2.4rem;
+  }
+}
+.form-imc label:not(:last-child) {
+  margin-bottom: 3.6rem;
+}
+
+.form-imc input:focus {
+  outline: none;
+  border: 1px solid var(--font-color);
+}
+
+.form-imc .name-imc-home {
+  width: 100%;
+  border-radius: 12px;
+}
+
+
+/* Button */
+.form-imc .calculate-button {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 24px;
+  background: linear-gradient(331.93deg, var(--dark-blue) 11.88%, #293140 85.18%);
+  mix-blend-mode: normal;
+  box-sizing: border-box;
+  box-shadow: -10px -10px 20px rgba(57, 66, 83, 0.35), 10px 10px 20px rgba(24, 28, 39, 0.35);
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.form-imc .calculate-button:hover {
+  background: var(--dark-blue);
+}
+
+.form-imc .calculate-button svg {
+  width: 60px;
+  height: 60px;
+}
+
+.form-imc .calculate-button svg path {
+  fill: var(--font-color);
+}
+
+/* result */
+.result {
+  margin-top: 1.6rem;
+  padding: 8px 0;
+  font-size: 1.8rem;
+  text-align: center;
+}
